@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="omindori_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CategoryMaster">
+    <Key>
+      <PropertyRef Name="PK_CategoryId" />
+    </Key>
+    <Property Name="PK_CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="ItemMaster">
+    <Key>
+      <PropertyRef Name="PK_ItemId" />
+    </Key>
+    <Property Name="PK_ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Rate" Type="Double" />
+    <Property Name="OfferRate" Type="Double" />
+    <Property Name="ImageName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Discount" Type="Double" />
+    <Property Name="Quantity" Type="Double" />
+    <Property Name="IsCOD" Type="Boolean" />
+    <Property Name="IsFreeDel" Type="Boolean" />
+    <Property Name="ShowFrontTop_3" Type="Boolean" />
+    <Property Name="ShowFrontMid_3" Type="Boolean" />
+    <Property Name="ShowFrontBottom_3" Type="Boolean" />
+    <Property Name="ShowFrontSlider_10" Type="Boolean" />
+    <Property Name="ShowLeftFront_5" Type="Boolean" />
+    <Property Name="ShowFrontSingle_1" Type="Boolean" />
+    <Property Name="ShowTop3" Type="Boolean" />
+    <Property Name="ShowBottom9" Type="Boolean" />
+    <Property Name="ShowSlider9" Type="Boolean" />
+    <Property Name="ShowLeft5" Type="Boolean" />
+    <Property Name="Position" Type="Int32" />
+    <Property Name="FrontPosition" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OrderMaster">
+    <Key>
+      <PropertyRef Name="Sno" />
+    </Key>
+    <Property Name="Sno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="LandMark" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="AddressType" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductList">
+    <Key>
+      <PropertyRef Name="PK_ImageId" />
+    </Key>
+    <Property Name="PK_ImageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Rate" Type="Double" />
+    <Property Name="SaveRate" Type="Double" />
+    <Property Name="OfferRate" Type="Double" />
+    <Property Name="Position" Type="Int32" />
+    <Property Name="ImageHeading" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsCOD" Type="Boolean" />
+    <Property Name="IsFreeDel" Type="Boolean" />
+    <Property Name="Discount" Type="Double" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ShowTop_3" Type="Boolean" />
+    <Property Name="ShowMid_3" Type="Boolean" />
+    <Property Name="ShowBottom_3" Type="Boolean" />
+    <Property Name="ShowSlider10" Type="Boolean" />
+    <Property Name="ShowLeft_5" Type="Boolean" />
+    <Property Name="ShowSingle_1" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SubCategoryMaster">
+    <Key>
+      <PropertyRef Name="PK_SubCategoryId" />
+    </Key>
+    <Property Name="PK_SubCategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="TempOrderList">
+    <Key>
+      <PropertyRef Name="PK_OrderId" />
+    </Key>
+    <Property Name="PK_OrderId" Type="Int32" Nullable="false" />
+    <Property Name="ImageId" Type="Int32" />
+    <Property Name="ImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Rate" Type="Double" />
+    <Property Name="Qty" Type="Double" />
+    <Property Name="SaveRate" Type="Double" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="omindori_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CategoryMasters" EntityType="Self.CategoryMaster" />
+    <EntitySet Name="ItemMasters" EntityType="Self.ItemMaster" />
+    <EntitySet Name="OrderMasters" EntityType="Self.OrderMaster" />
+    <EntitySet Name="ProductLists" EntityType="Self.ProductList" />
+    <EntitySet Name="SubCategoryMasters" EntityType="Self.SubCategoryMaster" />
+    <EntitySet Name="TempOrderLists" EntityType="Self.TempOrderList" />
+  </EntityContainer>
+</Schema>

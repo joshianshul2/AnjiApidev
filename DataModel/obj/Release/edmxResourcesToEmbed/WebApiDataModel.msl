@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bmwModelStoreContainer" CdmEntityContainer="bmwEntities">
+    <EntitySetMapping Name="Counters">
+      <EntityTypeMapping TypeName="bmwModel.Counter">
+        <MappingFragment StoreEntitySet="Counter">
+          <ScalarProperty Name="sno" ColumnName="sno" />
+          <ScalarProperty Name="counts" ColumnName="counts" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepositFileAttachmentDetails">
+      <EntityTypeMapping TypeName="bmwModel.DepositFileAttachmentDetail">
+        <MappingFragment StoreEntitySet="DepositFileAttachmentDetail">
+          <ScalarProperty Name="PK_AttachmenDetailIdDep" ColumnName="PK_AttachmenDetailIdDep" />
+          <ScalarProperty Name="Sno" ColumnName="Sno" />
+          <ScalarProperty Name="FK_DeptId" ColumnName="FK_DeptId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deposits">
+      <EntityTypeMapping TypeName="bmwModel.Deposit">
+        <MappingFragment StoreEntitySet="Deposits">
+          <ScalarProperty Name="PK_DepositId" ColumnName="PK_DepositId" />
+          <ScalarProperty Name="GivenBy" ColumnName="GivenBy" />
+          <ScalarProperty Name="ReceivedBy" ColumnName="ReceivedBy" />
+          <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ReceivingMode" ColumnName="ReceivingMode" />
+          <ScalarProperty Name="CRNNo" ColumnName="CRNNo" />
+          <ScalarProperty Name="CRNDate" ColumnName="CRNDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="DepositAcc" ColumnName="DepositAcc" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="AdjustedAmount" ColumnName="AdjustedAmount" />
+          <ScalarProperty Name="BalanceAmount" ColumnName="BalanceAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpenseClearings">
+      <EntityTypeMapping TypeName="bmwModel.ExpenseClearing">
+        <MappingFragment StoreEntitySet="ExpenseClearing">
+          <ScalarProperty Name="PK_TranId" ColumnName="PK_TranId" />
+          <ScalarProperty Name="ClearingDate" ColumnName="ClearingDate" />
+          <ScalarProperty Name="ClearedBy" ColumnName="ClearedBy" />
+          <ScalarProperty Name="ReceiptMode" ColumnName="ReceiptMode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="bmwModel.Expens">
+        <MappingFragment StoreEntitySet="Expenses">
+          <ScalarProperty Name="PK_ExpId" ColumnName="PK_ExpId" />
+          <ScalarProperty Name="ExpensesBy" ColumnName="ExpensesBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+          <ScalarProperty Name="ExpenseMode" ColumnName="ExpenseMode" />
+          <ScalarProperty Name="ExpCRNNo" ColumnName="ExpCRNNo" />
+          <ScalarProperty Name="ExpCRNDate" ColumnName="ExpCRNDate" />
+          <ScalarProperty Name="TotalClearAmt" ColumnName="TotalClearAmt" />
+          <ScalarProperty Name="IsCleared" ColumnName="IsCleared" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="CrearDate" ColumnName="CrearDate" />
+          <ScalarProperty Name="FK_DepositId" ColumnName="FK_DepositId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileAttachmentDetails">
+      <EntityTypeMapping TypeName="bmwModel.FileAttachmentDetail">
+        <MappingFragment StoreEntitySet="FileAttachmentDetail">
+          <ScalarProperty Name="PK_AttachmenDetailId" ColumnName="PK_AttachmenDetailId" />
+          <ScalarProperty Name="Sno" ColumnName="Sno" />
+          <ScalarProperty Name="FK_ExpId" ColumnName="FK_ExpId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HospitalMasters">
+      <EntityTypeMapping TypeName="bmwModel.HospitalMaster">
+        <MappingFragment StoreEntitySet="HospitalMaster">
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="PlantId" ColumnName="PlantId" />
+          <ScalarProperty Name="PK_HospitalId" ColumnName="PK_HospitalId" />
+          <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
+          <ScalarProperty Name="NameOfOwner" ColumnName="NameOfOwner" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="BedNos" ColumnName="BedNos" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ConfirmPassword" ColumnName="ConfirmPassword" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ActiveDate" ColumnName="ActiveDate" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="GSTINNo" ColumnName="GSTINNo" />
+          <ScalarProperty Name="OWNER" ColumnName="OWNER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HospitalTransactions">
+      <EntityTypeMapping TypeName="bmwModel.HospitalTransaction">
+        <MappingFragment StoreEntitySet="HospitalTransaction">
+          <ScalarProperty Name="SeqNo4" ColumnName="SeqNo4" />
+          <ScalarProperty Name="SeqNo3" ColumnName="SeqNo3" />
+          <ScalarProperty Name="SeqNo2" ColumnName="SeqNo2" />
+          <ScalarProperty Name="SeqNo1" ColumnName="SeqNo1" />
+          <ScalarProperty Name="TotalString" ColumnName="TotalString" />
+          <ScalarProperty Name="WhiteImgPath" ColumnName="WhiteImgPath" />
+          <ScalarProperty Name="BlueImgPath" ColumnName="BlueImgPath" />
+          <ScalarProperty Name="YellowImgPath" ColumnName="YellowImgPath" />
+          <ScalarProperty Name="RedImgPath" ColumnName="RedImgPath" />
+          <ScalarProperty Name="AllImgPath" ColumnName="AllImgPath" />
+          <ScalarProperty Name="PK_UserId" ColumnName="PK_UserId" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="WasteWeight" ColumnName="WasteWeight" />
+          <ScalarProperty Name="WasteDate" ColumnName="WasteDate" />
+          <ScalarProperty Name="RedBag" ColumnName="RedBag" />
+          <ScalarProperty Name="YellowBag" ColumnName="YellowBag" />
+          <ScalarProperty Name="BlueBag" ColumnName="BlueBag" />
+          <ScalarProperty Name="WhiteBag" ColumnName="WhiteBag" />
+          <ScalarProperty Name="CodeAll" ColumnName="CodeAll" />
+          <ScalarProperty Name="CodeRed" ColumnName="CodeRed" />
+          <ScalarProperty Name="CodeYellow" ColumnName="CodeYellow" />
+          <ScalarProperty Name="CodeBlue" ColumnName="CodeBlue" />
+          <ScalarProperty Name="CodeWhite" ColumnName="CodeWhite" />
+          <ScalarProperty Name="RedBagNos" ColumnName="RedBagNos" />
+          <ScalarProperty Name="BlueBagNos" ColumnName="BlueBagNos" />
+          <ScalarProperty Name="YellowBagNos" ColumnName="YellowBagNos" />
+          <ScalarProperty Name="WhiteBagNos" ColumnName="WhiteBagNos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentDetails">
+      <EntityTypeMapping TypeName="bmwModel.PaymentDetail">
+        <MappingFragment StoreEntitySet="PaymentDetail">
+          <ScalarProperty Name="PK_PaymentDetailId" ColumnName="PK_PaymentDetailId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="RegistrationFee" ColumnName="RegistrationFee" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="ChequeDate" ColumnName="ChequeDate" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="GSTINNo" ColumnName="GSTINNo" />
+          <ScalarProperty Name="bmwPlusWebsite" ColumnName="bmwPlusWebsite" />
+          <ScalarProperty Name="bmwAmt" ColumnName="bmwAmt" />
+          <ScalarProperty Name="WebDev" ColumnName="WebDev" />
+          <ScalarProperty Name="Domain" ColumnName="Domain" />
+          <ScalarProperty Name="Hosting" ColumnName="Hosting" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Misc" ColumnName="Misc" />
+          <ScalarProperty Name="GTotal" ColumnName="GTotal" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserMasters">
+      <EntityTypeMapping TypeName="bmwModel.UserMaster">
+        <MappingFragment StoreEntitySet="UserMaster">
+          <ScalarProperty Name="PK_UserId" ColumnName="PK_UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ConfirmPassword" ColumnName="ConfirmPassword" />
+          <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FK_CityId" ColumnName="FK_CityId" />
+          <ScalarProperty Name="FK_StateId" ColumnName="FK_StateId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CityMasters">
+      <EntityTypeMapping TypeName="bmwModel.CityMaster">
+        <MappingFragment StoreEntitySet="CityMaster">
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="PK_ID" ColumnName="PK_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARs">
+      <EntityTypeMapping TypeName="bmwModel.AR">
+        <MappingFragment StoreEntitySet="AR">
+          <ScalarProperty Name="TaskColour" ColumnName="TaskColour" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="LoyaltyEnrolment" ColumnName="LoyaltyEnrolment" />
+          <ScalarProperty Name="AccType" ColumnName="AccType" />
+          <ScalarProperty Name="BulkEmailableStmtSent" ColumnName="BulkEmailableStmtSent" />
+          <ScalarProperty Name="PinpointUpdateAction" ColumnName="PinpointUpdateAction" />
+          <ScalarProperty Name="PromptForDeliveryDate" ColumnName="PromptForDeliveryDate" />
+          <ScalarProperty Name="nonEmailStmtsSent" ColumnName="nonEmailStmtsSent" />
+          <ScalarProperty Name="LastSocketUpdate" ColumnName="LastSocketUpdate" />
+          <ScalarProperty Name="eMailForReceipts" ColumnName="eMailForReceipts" />
+          <ScalarProperty Name="eMailForQuotes" ColumnName="eMailForQuotes" />
+          <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+          <ScalarProperty Name="HideSalePriceFromSignature" ColumnName="HideSalePriceFromSignature" />
+          <ScalarProperty Name="UseBillToCreditLimit" ColumnName="UseBillToCreditLimit" />
+          <ScalarProperty Name="eMailReceipts" ColumnName="eMailReceipts" />
+          <ScalarProperty Name="PresentSubaccountListAtPos" ColumnName="PresentSubaccountListAtPos" />
+          <ScalarProperty Name="PreventAutoAllocate" ColumnName="PreventAutoAllocate" />
+          <ScalarProperty Name="TermNoOfMonth" ColumnName="TermNoOfMonth" />
+          <ScalarProperty Name="TermDaysYN" ColumnName="TermDaysYN" />
+          <ScalarProperty Name="BPayNo" ColumnName="BPayNo" />
+          <ScalarProperty Name="PopupUserFieldsAtPos" ColumnName="PopupUserFieldsAtPos" />
+          <ScalarProperty Name="PromptTaxInvoice" ColumnName="PromptTaxInvoice" />
+          <ScalarProperty Name="BFDeferred" ColumnName="BFDeferred" />
+          <ScalarProperty Name="DonationRoundingVal" ColumnName="DonationRoundingVal" />
+          <ScalarProperty Name="DonationRounding" ColumnName="DonationRounding" />
+          <ScalarProperty Name="BranchCreated" ColumnName="BranchCreated" />
+          <ScalarProperty Name="eMailInvoiceToBillTo" ColumnName="eMailInvoiceToBillTo" />
+          <ScalarProperty Name="takeCODeposits" ColumnName="takeCODeposits" />
+          <ScalarProperty Name="BaseSettlement" ColumnName="BaseSettlement" />
+          <ScalarProperty Name="eMailForStatements" ColumnName="eMailForStatements" />
+          <ScalarProperty Name="eMailStatements" ColumnName="eMailStatements" />
+          <ScalarProperty Name="eMailStmtSent" ColumnName="eMailStmtSent" />
+          <ScalarProperty Name="eMailStmtRequest" ColumnName="eMailStmtRequest" />
+          <ScalarProperty Name="eMailStatementLayout" ColumnName="eMailStatementLayout" />
+          <ScalarProperty Name="isBranch" ColumnName="isBranch" />
+          <ScalarProperty Name="PromptAtPOSForEmailQuotes" ColumnName="PromptAtPOSForEmailQuotes" />
+          <ScalarProperty Name="eMailQuotes" ColumnName="eMailQuotes" />
+          <ScalarProperty Name="eMailInvoice" ColumnName="eMailInvoice" />
+          <ScalarProperty Name="UseBillToPricing" ColumnName="UseBillToPricing" />
+          <ScalarProperty Name="SignatureOnInvoice" ColumnName="SignatureOnInvoice" />
+          <ScalarProperty Name="ForceChargedByAtPOS" ColumnName="ForceChargedByAtPOS" />
+          <ScalarProperty Name="ReceiptCopies" ColumnName="ReceiptCopies" />
+          <ScalarProperty Name="InvoiceCopies" ColumnName="InvoiceCopies" />
+          <ScalarProperty Name="accruePoints" ColumnName="accruePoints" />
+          <ScalarProperty Name="LoyaltyBalance" ColumnName="LoyaltyBalance" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="cartageCode" ColumnName="cartageCode" />
+          <ScalarProperty Name="cartageCalcMethod" ColumnName="cartageCalcMethod" />
+          <ScalarProperty Name="MinInvoiceAmount" ColumnName="MinInvoiceAmount" />
+          <ScalarProperty Name="PriceLevel2" ColumnName="PriceLevel2" />
+          <ScalarProperty Name="ReplicatedDateLastUpdate" ColumnName="ReplicatedDateLastUpdate" />
+          <ScalarProperty Name="origin" ColumnName="origin" />
+          <ScalarProperty Name="PrintReceiptDockets" ColumnName="PrintReceiptDockets" />
+          <ScalarProperty Name="PrintReceipts" ColumnName="PrintReceipts" />
+          <ScalarProperty Name="ReceiptLayout" ColumnName="ReceiptLayout" />
+          <ScalarProperty Name="InvoiceLayout3" ColumnName="InvoiceLayout3" />
+          <ScalarProperty Name="InvoiceLayout2" ColumnName="InvoiceLayout2" />
+          <ScalarProperty Name="ReceiptLayout3" ColumnName="ReceiptLayout3" />
+          <ScalarProperty Name="ReceiptLayout2" ColumnName="ReceiptLayout2" />
+          <ScalarProperty Name="LoyaltyCard" ColumnName="LoyaltyCard" />
+          <ScalarProperty Name="DateLastUpdate" ColumnName="DateLastUpdate" />
+          <ScalarProperty Name="GSTLastYr" ColumnName="GSTLastYr" />
+          <ScalarProperty Name="GSTYTD" ColumnName="GSTYTD" />
+          <ScalarProperty Name="GSTMTD" ColumnName="GSTMTD" />
+          <ScalarProperty Name="GSTFuture" ColumnName="GSTFuture" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Layby" ColumnName="Layby" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+          <ScalarProperty Name="STaxJurisdiction" ColumnName="STaxJurisdiction" />
+          <ScalarProperty Name="PO" ColumnName="PO" />
+          <ScalarProperty Name="FaxInvoice" ColumnName="FaxInvoice" />
+          <ScalarProperty Name="PrintStatement" ColumnName="PrintStatement" />
+          <ScalarProperty Name="FaxStatement" ColumnName="FaxStatement" />
+          <ScalarProperty Name="InvoiceLayout" ColumnName="InvoiceLayout" />
+          <ScalarProperty Name="GSTExInv" ColumnName="GSTExInv" />
+          <ScalarProperty Name="ACExpiry" ColumnName="ACExpiry" />
+          <ScalarProperty Name="CashAC" ColumnName="CashAC" />
+          <ScalarProperty Name="StopCredit" ColumnName="StopCredit" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="PrintInvCrSummary" ColumnName="PrintInvCrSummary" />
+          <ScalarProperty Name="PrintDockets" ColumnName="PrintDockets" />
+          <ScalarProperty Name="PrintInvoices" ColumnName="PrintInvoices" />
+          <ScalarProperty Name="PrintDiscOnStatements" ColumnName="PrintDiscOnStatements" />
+          <ScalarProperty Name="PrintSetlDiscOnInvoices" ColumnName="PrintSetlDiscOnInvoices" />
+          <ScalarProperty Name="PrintBalOnInvoices" ColumnName="PrintBalOnInvoices" />
+          <ScalarProperty Name="MinInvAmt4Disc" ColumnName="MinInvAmt4Disc" />
+          <ScalarProperty Name="TermDays" ColumnName="TermDays" />
+          <ScalarProperty Name="TermType" ColumnName="TermType" />
+          <ScalarProperty Name="PriceLevel" ColumnName="PriceLevel" />
+          <ScalarProperty Name="TaxNo" ColumnName="TaxNo" />
+          <ScalarProperty Name="SType" ColumnName="SType" />
+          <ScalarProperty Name="ServiceFee" ColumnName="ServiceFee" />
+          <ScalarProperty Name="Interest" ColumnName="Interest" />
+          <ScalarProperty Name="DateOpened" ColumnName="DateOpened" />
+          <ScalarProperty Name="DateLastPay" ColumnName="DateLastPay" />
+          <ScalarProperty Name="DateLastPurch" ColumnName="DateLastPurch" />
+          <ScalarProperty Name="UnAlloc" ColumnName="UnAlloc" />
+          <ScalarProperty Name="BFBal" ColumnName="BFBal" />
+          <ScalarProperty Name="LastRecAmt" ColumnName="LastRecAmt" />
+          <ScalarProperty Name="OnOrder" ColumnName="OnOrder" />
+          <ScalarProperty Name="COSalesLastYr" ColumnName="COSalesLastYr" />
+          <ScalarProperty Name="COSalesYTD" ColumnName="COSalesYTD" />
+          <ScalarProperty Name="COSalesMTD" ColumnName="COSalesMTD" />
+          <ScalarProperty Name="COSalesFuture" ColumnName="COSalesFuture" />
+          <ScalarProperty Name="SalesLastYr" ColumnName="SalesLastYr" />
+          <ScalarProperty Name="SalesYTD" ColumnName="SalesYTD" />
+          <ScalarProperty Name="SalesMTD" ColumnName="SalesMTD" />
+          <ScalarProperty Name="SalesFuture" ColumnName="SalesFuture" />
+          <ScalarProperty Name="Owe90" ColumnName="Owe90" />
+          <ScalarProperty Name="Owe60" ColumnName="Owe60" />
+          <ScalarProperty Name="Owe30" ColumnName="Owe30" />
+          <ScalarProperty Name="OweCurrent" ColumnName="OweCurrent" />
+          <ScalarProperty Name="OweFuture" ColumnName="OweFuture" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="CrLimitTime" ColumnName="CrLimitTime" />
+          <ScalarProperty Name="CrLimit_" ColumnName="CrLimit$" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="PPostCode" ColumnName="PPostCode" />
+          <ScalarProperty Name="PAddress3" ColumnName="PAddress3" />
+          <ScalarProperty Name="PAddress2" ColumnName="PAddress2" />
+          <ScalarProperty Name="PAddress1" ColumnName="PAddress1" />
+          <ScalarProperty Name="SPerson" ColumnName="SPerson" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="InternalKey" ColumnName="InternalKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTypeMasters">
+      <EntityTypeMapping TypeName="bmwModel.UserTypeMaster">
+        <MappingFragment StoreEntitySet="UserTypeMaster">
+          <ScalarProperty Name="IsIncenerator" ColumnName="IsIncenerator" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+          <ScalarProperty Name="PK_UserTypeId" ColumnName="PK_UserTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

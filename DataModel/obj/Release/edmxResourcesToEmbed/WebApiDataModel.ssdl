@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bmwModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AR">
+    <Key>
+      <PropertyRef Name="InternalKey" />
+    </Key>
+    <Property Name="InternalKey" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="40" />
+    <Property Name="SPerson" Type="varchar" MaxLength="10" />
+    <Property Name="PAddress1" Type="varchar" MaxLength="25" />
+    <Property Name="PAddress2" Type="varchar" MaxLength="25" />
+    <Property Name="PAddress3" Type="varchar" MaxLength="25" />
+    <Property Name="PPostCode" Type="varchar" MaxLength="11" />
+    <Property Name="Phone" Type="varchar" MaxLength="15" />
+    <Property Name="Fax" Type="varchar" MaxLength="15" />
+    <Property Name="Bank" Type="varchar" MaxLength="4" />
+    <Property Name="Branch" Type="varchar" MaxLength="30" />
+    <Property Name="CrLimit$" Type="money" />
+    <Property Name="CrLimitTime" Type="smallint" />
+    <Property Name="Profile" Type="varchar" MaxLength="13" />
+    <Property Name="Instructions" Type="text" />
+    <Property Name="BillTo" Type="int" />
+    <Property Name="OweFuture" Type="money" />
+    <Property Name="OweCurrent" Type="money" />
+    <Property Name="Owe30" Type="money" />
+    <Property Name="Owe60" Type="money" />
+    <Property Name="Owe90" Type="money" />
+    <Property Name="SalesFuture" Type="money" />
+    <Property Name="SalesMTD" Type="money" />
+    <Property Name="SalesYTD" Type="money" />
+    <Property Name="SalesLastYr" Type="money" />
+    <Property Name="COSalesFuture" Type="money" />
+    <Property Name="COSalesMTD" Type="money" />
+    <Property Name="COSalesYTD" Type="money" />
+    <Property Name="COSalesLastYr" Type="money" />
+    <Property Name="OnOrder" Type="money" />
+    <Property Name="LastRecAmt" Type="money" />
+    <Property Name="BFBal" Type="money" />
+    <Property Name="UnAlloc" Type="money" />
+    <Property Name="DateLastPurch" Type="datetime" />
+    <Property Name="DateLastPay" Type="datetime" />
+    <Property Name="DateOpened" Type="datetime" />
+    <Property Name="Interest" Type="float" />
+    <Property Name="ServiceFee" Type="money" />
+    <Property Name="SType" Type="varchar" MaxLength="4" />
+    <Property Name="TaxNo" Type="varchar" MaxLength="15" />
+    <Property Name="PriceLevel" Type="varchar" MaxLength="4" />
+    <Property Name="TermType" Type="varchar" MaxLength="1" />
+    <Property Name="TermDays" Type="smallint" />
+    <Property Name="MinInvAmt4Disc" Type="money" />
+    <Property Name="PrintBalOnInvoices" Type="bit" Nullable="false" />
+    <Property Name="PrintSetlDiscOnInvoices" Type="bit" Nullable="false" />
+    <Property Name="PrintDiscOnStatements" Type="bit" Nullable="false" />
+    <Property Name="PrintInvoices" Type="bit" Nullable="false" />
+    <Property Name="PrintDockets" Type="bit" Nullable="false" />
+    <Property Name="PrintInvCrSummary" Type="bit" Nullable="false" />
+    <Property Name="Notes" Type="text" />
+    <Property Name="StopCredit" Type="bit" Nullable="false" />
+    <Property Name="CashAC" Type="bit" Nullable="false" />
+    <Property Name="ACExpiry" Type="datetime" />
+    <Property Name="GSTExInv" Type="bit" Nullable="false" />
+    <Property Name="InvoiceLayout" Type="varchar" MaxLength="4" />
+    <Property Name="FaxStatement" Type="bit" Nullable="false" />
+    <Property Name="PrintStatement" Type="bit" Nullable="false" />
+    <Property Name="FaxInvoice" Type="bit" Nullable="false" />
+    <Property Name="PO" Type="bit" Nullable="false" />
+    <Property Name="STaxJurisdiction" Type="varchar" MaxLength="4" />
+    <Property Name="TaxCode" Type="varchar" MaxLength="4" />
+    <Property Name="AreaCode" Type="varchar" MaxLength="4" />
+    <Property Name="Layby" Type="bit" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="GSTFuture" Type="money" />
+    <Property Name="GSTMTD" Type="money" />
+    <Property Name="GSTYTD" Type="money" />
+    <Property Name="GSTLastYr" Type="money" />
+    <Property Name="DateLastUpdate" Type="datetime" />
+    <Property Name="LoyaltyCard" Type="varchar" MaxLength="20" />
+    <Property Name="ReceiptLayout2" Type="varchar" MaxLength="5" />
+    <Property Name="ReceiptLayout3" Type="varchar" MaxLength="5" />
+    <Property Name="InvoiceLayout2" Type="varchar" MaxLength="5" />
+    <Property Name="InvoiceLayout3" Type="varchar" MaxLength="5" />
+    <Property Name="ReceiptLayout" Type="varchar" MaxLength="5" />
+    <Property Name="PrintReceipts" Type="bit" />
+    <Property Name="PrintReceiptDockets" Type="bit" />
+    <Property Name="origin" Type="int" />
+    <Property Name="ReplicatedDateLastUpdate" Type="datetime" />
+    <Property Name="PriceLevel2" Type="varchar" MaxLength="4" />
+    <Property Name="MinInvoiceAmount" Type="money" />
+    <Property Name="cartageCalcMethod" Type="varchar" MaxLength="30" />
+    <Property Name="cartageCode" Type="varchar" MaxLength="30" />
+    <Property Name="LastEditedBy" Type="varchar" MaxLength="255" />
+    <Property Name="LoyaltyBalance" Type="int" Nullable="false" />
+    <Property Name="accruePoints" Type="bit" />
+    <Property Name="InvoiceCopies" Type="int" Nullable="false" />
+    <Property Name="ReceiptCopies" Type="int" Nullable="false" />
+    <Property Name="ForceChargedByAtPOS" Type="bit" Nullable="false" />
+    <Property Name="SignatureOnInvoice" Type="bit" Nullable="false" />
+    <Property Name="UseBillToPricing" Type="bit" />
+    <Property Name="eMailInvoice" Type="bit" Nullable="false" />
+    <Property Name="eMailQuotes" Type="bit" Nullable="false" />
+    <Property Name="PromptAtPOSForEmailQuotes" Type="bit" Nullable="false" />
+    <Property Name="isBranch" Type="bit" Nullable="false" />
+    <Property Name="eMailStatementLayout" Type="varchar" MaxLength="255" />
+    <Property Name="eMailStmtRequest" Type="datetime" />
+    <Property Name="eMailStmtSent" Type="datetime" />
+    <Property Name="eMailStatements" Type="bit" Nullable="false" />
+    <Property Name="eMailForStatements" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="BaseSettlement" Type="numeric" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="takeCODeposits" Type="bit" Nullable="false" />
+    <Property Name="eMailInvoiceToBillTo" Type="bit" Nullable="false" />
+    <Property Name="BranchCreated" Type="varchar" MaxLength="10" />
+    <Property Name="DonationRounding" Type="bit" />
+    <Property Name="DonationRoundingVal" Type="money" />
+    <Property Name="BFDeferred" Type="money" />
+    <Property Name="PromptTaxInvoice" Type="bit" />
+    <Property Name="PopupUserFieldsAtPos" Type="bit" />
+    <Property Name="BPayNo" Type="varchar" MaxLength="50" />
+    <Property Name="TermDaysYN" Type="bit" Nullable="false" />
+    <Property Name="TermNoOfMonth" Type="int" />
+    <Property Name="PreventAutoAllocate" Type="bit" Nullable="false" />
+    <Property Name="PresentSubaccountListAtPos" Type="bit" />
+    <Property Name="eMailReceipts" Type="bit" Nullable="false" />
+    <Property Name="UseBillToCreditLimit" Type="bit" />
+    <Property Name="HideSalePriceFromSignature" Type="bit" Nullable="false" />
+    <Property Name="EditedBy" Type="varchar" MaxLength="50" />
+    <Property Name="eMailForQuotes" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="eMailForReceipts" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="LastSocketUpdate" Type="datetime" />
+    <Property Name="nonEmailStmtsSent" Type="datetime" />
+    <Property Name="PromptForDeliveryDate" Type="bit" Nullable="false" />
+    <Property Name="PinpointUpdateAction" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="BulkEmailableStmtSent" Type="datetime" />
+    <Property Name="AccType" Type="varchar" MaxLength="10" />
+    <Property Name="LoyaltyEnrolment" Type="datetime" />
+    <Property Name="Locked" Type="bit" />
+    <Property Name="TaskColour" Type="bigint" />
+  </EntityType>
+  <EntityType Name="CityMaster">
+    <Key>
+      <PropertyRef Name="PK_ID" />
+    </Key>
+    <Property Name="PK_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="255" />
+    <Property Name="DistrictName" Type="nvarchar" MaxLength="255" />
+    <Property Name="StateName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="sno" />
+    </Key>
+    <Property Name="sno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="counts" Type="int" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DepositFileAttachmentDetail">
+    <Key>
+      <PropertyRef Name="PK_AttachmenDetailIdDep" />
+    </Key>
+    <Property Name="PK_AttachmenDetailIdDep" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sno" Type="int" />
+    <Property Name="FK_DeptId" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Deposits">
+    <Key>
+      <PropertyRef Name="PK_DepositId" />
+    </Key>
+    <Property Name="PK_DepositId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GivenBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceivedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceivedDate" Type="datetime" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="ReceivingMode" Type="nvarchar" MaxLength="10" />
+    <Property Name="CRNNo" Type="int" />
+    <Property Name="CRNDate" Type="datetime" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="DepositAcc" Type="nvarchar" MaxLength="5" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="500" />
+    <Property Name="AdjustedAmount" Type="int" />
+    <Property Name="BalanceAmount" Type="int" />
+  </EntityType>
+  <EntityType Name="ExpenseClearing">
+    <Key>
+      <PropertyRef Name="PK_TranId" />
+    </Key>
+    <Property Name="PK_TranId" Type="int" Nullable="false" />
+    <Property Name="ClearingDate" Type="datetime" />
+    <Property Name="ClearedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceiptMode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Amount" Type="int" />
+  </EntityType>
+  <EntityType Name="Expenses">
+    <Key>
+      <PropertyRef Name="PK_ExpId" />
+    </Key>
+    <Property Name="PK_ExpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpensesBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ExpDate" Type="datetime" />
+    <Property Name="ExpType" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExpenseMode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExpCRNNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExpCRNDate" Type="datetime" />
+    <Property Name="TotalClearAmt" Type="int" />
+    <Property Name="IsCleared" Type="bit" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="200" />
+    <Property Name="Owner" Type="nvarchar" MaxLength="5" />
+    <Property Name="CrearDate" Type="datetime" />
+    <Property Name="FK_DepositId" Type="int" />
+  </EntityType>
+  <EntityType Name="FileAttachmentDetail">
+    <Key>
+      <PropertyRef Name="PK_AttachmenDetailId" />
+    </Key>
+    <Property Name="PK_AttachmenDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sno" Type="int" />
+    <Property Name="FK_ExpId" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HospitalMaster">
+    <Key>
+      <PropertyRef Name="PK_HospitalId" />
+    </Key>
+    <Property Name="PK_HospitalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HospitalName" Type="nvarchar" MaxLength="100" />
+    <Property Name="NameOfOwner" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="District" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="100" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="BedNos" Type="int" />
+    <Property Name="RegDate" Type="datetime" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="10" />
+    <Property Name="Password" Type="nvarchar" MaxLength="10" />
+    <Property Name="ConfirmPassword" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="ActiveDate" Type="datetime" />
+    <Property Name="UserType" Type="int" />
+    <Property Name="GSTINNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="OWNER" Type="nvarchar" MaxLength="5" />
+    <Property Name="PlantId" Type="int" />
+    <Property Name="UnitType" Type="nvarchar" MaxLength="2" />
+    <Property Name="Pincode" Type="int" />
+  </EntityType>
+  <EntityType Name="HospitalTransaction">
+    <Key>
+      <PropertyRef Name="PK_UserId" />
+    </Key>
+    <Property Name="PK_UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="20" />
+    <Property Name="HospitalName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="District" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="WasteWeight" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WasteDate" Type="datetime" />
+    <Property Name="RedBag" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="YellowBag" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BlueBag" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WhiteBag" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CodeAll" Type="nvarchar(max)" />
+    <Property Name="CodeRed" Type="nvarchar(max)" />
+    <Property Name="CodeYellow" Type="nvarchar(max)" />
+    <Property Name="CodeBlue" Type="nvarchar(max)" />
+    <Property Name="CodeWhite" Type="nvarchar(max)" />
+    <Property Name="RedBagNos" Type="smallint" />
+    <Property Name="BlueBagNos" Type="smallint" />
+    <Property Name="YellowBagNos" Type="smallint" />
+    <Property Name="WhiteBagNos" Type="smallint" />
+    <Property Name="AllImgPath" Type="nvarchar" MaxLength="200" />
+    <Property Name="RedImgPath" Type="nvarchar" MaxLength="200" />
+    <Property Name="YellowImgPath" Type="nvarchar" MaxLength="200" />
+    <Property Name="BlueImgPath" Type="nvarchar" MaxLength="200" />
+    <Property Name="WhiteImgPath" Type="nvarchar" MaxLength="200" />
+    <Property Name="TotalString" Type="nvarchar" MaxLength="50" />
+    <Property Name="SeqNo1" Type="nvarchar" MaxLength="10" />
+    <Property Name="SeqNo2" Type="nvarchar" MaxLength="10" />
+    <Property Name="SeqNo3" Type="nvarchar" MaxLength="10" />
+    <Property Name="SeqNo4" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PaymentDetail">
+    <Key>
+      <PropertyRef Name="PK_PaymentDetailId" />
+    </Key>
+    <Property Name="PK_PaymentDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="10" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegistrationFee" Type="int" />
+    <Property Name="PaymentDate" Type="datetime" />
+    <Property Name="ChequeDate" Type="datetime" />
+    <Property Name="ChequeNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="PaymentMode" Type="nvarchar" MaxLength="10" />
+    <Property Name="GSTINNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="bmwPlusWebsite" Type="int" />
+    <Property Name="bmwAmt" Type="decimal" Precision="6" Scale="0" />
+    <Property Name="WebDev" Type="decimal" Precision="6" Scale="0" />
+    <Property Name="Domain" Type="decimal" Precision="6" Scale="0" />
+    <Property Name="Hosting" Type="decimal" Precision="6" Scale="0" />
+    <Property Name="Discount" Type="decimal" Precision="6" Scale="0" />
+    <Property Name="Total" Type="decimal" Precision="6" Scale="0" />
+    <Property Name="Misc" Type="decimal" Precision="6" Scale="0" />
+    <Property Name="GTotal" Type="decimal" Precision="6" Scale="0" />
+    <Property Name="Owner" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="UserMaster">
+    <Key>
+      <PropertyRef Name="PK_UserId" />
+    </Key>
+    <Property Name="PK_UserId" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConfirmPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="HospitalName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_CityId" Type="int" />
+    <Property Name="FK_StateId" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UserType" Type="int" />
+  </EntityType>
+  <EntityType Name="UserTypeMaster">
+    <Key>
+      <PropertyRef Name="PK_UserTypeId" />
+    </Key>
+    <Property Name="PK_UserTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="IsIncenerator" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="bmwModelStoreContainer">
+    <EntitySet Name="AR" EntityType="Self.AR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CityMaster" EntityType="Self.CityMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Counter" EntityType="Self.Counter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DepositFileAttachmentDetail" EntityType="Self.DepositFileAttachmentDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Deposits" EntityType="Self.Deposits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExpenseClearing" EntityType="Self.ExpenseClearing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expenses" EntityType="Self.Expenses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileAttachmentDetail" EntityType="Self.FileAttachmentDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HospitalMaster" EntityType="Self.HospitalMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HospitalTransaction" EntityType="Self.HospitalTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentDetail" EntityType="Self.PaymentDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTypeMaster" EntityType="Self.UserTypeMaster" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

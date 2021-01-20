@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bmwModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="sno" />
+    </Key>
+    <Property Name="sno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="counts" Type="Int32" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DepositFileAttachmentDetail">
+    <Key>
+      <PropertyRef Name="PK_AttachmenDetailIdDep" />
+    </Key>
+    <Property Name="PK_AttachmenDetailIdDep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sno" Type="Int32" />
+    <Property Name="FK_DeptId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FilePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Deposit">
+    <Key>
+      <PropertyRef Name="PK_DepositId" />
+    </Key>
+    <Property Name="PK_DepositId" Type="Int32" Nullable="false" />
+    <Property Name="GivenBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReceivedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReceivedDate" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ReceivingMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CRNNo" Type="Int32" />
+    <Property Name="CRNDate" Type="DateTime" Precision="3" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="DepositAcc" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="FilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustedAmount" Type="Int32" />
+    <Property Name="BalanceAmount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ExpenseClearing">
+    <Key>
+      <PropertyRef Name="PK_TranId" />
+    </Key>
+    <Property Name="PK_TranId" Type="Int32" Nullable="false" />
+    <Property Name="ClearingDate" Type="DateTime" Precision="3" />
+    <Property Name="ClearedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReceiptMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Expens">
+    <Key>
+      <PropertyRef Name="PK_ExpId" />
+    </Key>
+    <Property Name="PK_ExpId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpensesBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ExpDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExpCRNNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExpCRNDate" Type="DateTime" Precision="3" />
+    <Property Name="TotalClearAmt" Type="Int32" />
+    <Property Name="IsCleared" Type="Boolean" />
+    <Property Name="FilePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Owner" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="CrearDate" Type="DateTime" Precision="3" />
+    <Property Name="FK_DepositId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="FileAttachmentDetail">
+    <Key>
+      <PropertyRef Name="PK_AttachmenDetailId" />
+    </Key>
+    <Property Name="PK_AttachmenDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sno" Type="Int32" />
+    <Property Name="FK_ExpId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FilePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="HospitalMaster">
+    <Key>
+      <PropertyRef Name="PK_HospitalId" />
+    </Key>
+    <Property Name="PK_HospitalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HospitalName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NameOfOwner" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BedNos" Type="Int32" />
+    <Property Name="RegDate" Type="DateTime" Precision="3" />
+    <Property Name="UserName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ConfirmPassword" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="ActiveDate" Type="DateTime" Precision="3" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="GSTINNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWNER" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="PlantId" Type="Int32" />
+    <Property Name="UnitType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Pincode" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HospitalTransaction">
+    <Key>
+      <PropertyRef Name="PK_UserId" />
+    </Key>
+    <Property Name="PK_UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="HospitalName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WasteWeight" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WasteDate" Type="DateTime" Precision="3" />
+    <Property Name="RedBag" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="YellowBag" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BlueBag" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WhiteBag" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CodeAll" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CodeRed" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CodeYellow" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CodeBlue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CodeWhite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RedBagNos" Type="Int16" />
+    <Property Name="BlueBagNos" Type="Int16" />
+    <Property Name="YellowBagNos" Type="Int16" />
+    <Property Name="WhiteBagNos" Type="Int16" />
+    <Property Name="AllImgPath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RedImgPath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="YellowImgPath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BlueImgPath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="WhiteImgPath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TotalString" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SeqNo1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SeqNo2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SeqNo3" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SeqNo4" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PaymentDetail">
+    <Key>
+      <PropertyRef Name="PK_PaymentDetailId" />
+    </Key>
+    <Property Name="PK_PaymentDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="BankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegistrationFee" Type="Int32" />
+    <Property Name="PaymentDate" Type="DateTime" Precision="3" />
+    <Property Name="ChequeDate" Type="DateTime" Precision="3" />
+    <Property Name="ChequeNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="GSTINNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bmwPlusWebsite" Type="Int32" />
+    <Property Name="bmwAmt" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="WebDev" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="Domain" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="Hosting" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="Discount" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="Total" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="Misc" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="GTotal" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="Owner" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserMaster">
+    <Key>
+      <PropertyRef Name="PK_UserId" />
+    </Key>
+    <Property Name="PK_UserId" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ConfirmPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HospitalName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FK_CityId" Type="Int32" />
+    <Property Name="FK_StateId" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="UserType" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="bmwEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Counters" EntityType="Self.Counter" />
+    <EntitySet Name="DepositFileAttachmentDetails" EntityType="Self.DepositFileAttachmentDetail" />
+    <EntitySet Name="Deposits" EntityType="Self.Deposit" />
+    <EntitySet Name="ExpenseClearings" EntityType="Self.ExpenseClearing" />
+    <EntitySet Name="Expenses" EntityType="Self.Expens" />
+    <EntitySet Name="FileAttachmentDetails" EntityType="Self.FileAttachmentDetail" />
+    <EntitySet Name="HospitalMasters" EntityType="Self.HospitalMaster" />
+    <EntitySet Name="HospitalTransactions" EntityType="Self.HospitalTransaction" />
+    <EntitySet Name="PaymentDetails" EntityType="Self.PaymentDetail" />
+    <EntitySet Name="UserMasters" EntityType="Self.UserMaster" />
+    <EntitySet Name="CityMasters" EntityType="bmwModel.CityMaster" />
+    <EntitySet Name="ARs" EntityType="bmwModel.AR" />
+    <EntitySet Name="UserTypeMasters" EntityType="bmwModel.UserTypeMaster" />
+  </EntityContainer>
+  <EntityType Name="CityMaster">
+    <Key>
+      <PropertyRef Name="PK_ID" />
+    </Key>
+    <Property Name="PK_ID" Type="Int32" Nullable="false" />
+    <Property Name="CityName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DistrictName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="StateName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AR">
+    <Key>
+      <PropertyRef Name="InternalKey" />
+    </Key>
+    <Property Name="InternalKey" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SPerson" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PAddress1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PAddress2" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PAddress3" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PPostCode" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Bank" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Branch" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CrLimit_" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CrLimitTime" Type="Int16" />
+    <Property Name="Profile" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="Instructions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BillTo" Type="Int32" />
+    <Property Name="OweFuture" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OweCurrent" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Owe30" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Owe60" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Owe90" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalesFuture" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalesMTD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalesYTD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalesLastYr" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="COSalesFuture" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="COSalesMTD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="COSalesYTD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="COSalesLastYr" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OnOrder" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LastRecAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BFBal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UnAlloc" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DateLastPurch" Type="DateTime" Precision="3" />
+    <Property Name="DateLastPay" Type="DateTime" Precision="3" />
+    <Property Name="DateOpened" Type="DateTime" Precision="3" />
+    <Property Name="Interest" Type="Double" />
+    <Property Name="ServiceFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SType" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TaxNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PriceLevel" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TermType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TermDays" Type="Int16" />
+    <Property Name="MinInvAmt4Disc" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PrintBalOnInvoices" Type="Boolean" Nullable="false" />
+    <Property Name="PrintSetlDiscOnInvoices" Type="Boolean" Nullable="false" />
+    <Property Name="PrintDiscOnStatements" Type="Boolean" Nullable="false" />
+    <Property Name="PrintInvoices" Type="Boolean" Nullable="false" />
+    <Property Name="PrintDockets" Type="Boolean" Nullable="false" />
+    <Property Name="PrintInvCrSummary" Type="Boolean" Nullable="false" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StopCredit" Type="Boolean" Nullable="false" />
+    <Property Name="CashAC" Type="Boolean" Nullable="false" />
+    <Property Name="ACExpiry" Type="DateTime" Precision="3" />
+    <Property Name="GSTExInv" Type="Boolean" Nullable="false" />
+    <Property Name="InvoiceLayout" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="FaxStatement" Type="Boolean" Nullable="false" />
+    <Property Name="PrintStatement" Type="Boolean" Nullable="false" />
+    <Property Name="FaxInvoice" Type="Boolean" Nullable="false" />
+    <Property Name="PO" Type="Boolean" Nullable="false" />
+    <Property Name="STaxJurisdiction" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TaxCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="AreaCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Layby" Type="Boolean" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GSTFuture" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GSTMTD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GSTYTD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GSTLastYr" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DateLastUpdate" Type="DateTime" Precision="3" />
+    <Property Name="LoyaltyCard" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ReceiptLayout2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ReceiptLayout3" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceLayout2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceLayout3" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ReceiptLayout" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PrintReceipts" Type="Boolean" />
+    <Property Name="PrintReceiptDockets" Type="Boolean" />
+    <Property Name="origin" Type="Int32" />
+    <Property Name="ReplicatedDateLastUpdate" Type="DateTime" Precision="3" />
+    <Property Name="PriceLevel2" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MinInvoiceAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cartageCalcMethod" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cartageCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LastEditedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LoyaltyBalance" Type="Int32" Nullable="false" />
+    <Property Name="accruePoints" Type="Boolean" />
+    <Property Name="InvoiceCopies" Type="Int32" Nullable="false" />
+    <Property Name="ReceiptCopies" Type="Int32" Nullable="false" />
+    <Property Name="ForceChargedByAtPOS" Type="Boolean" Nullable="false" />
+    <Property Name="SignatureOnInvoice" Type="Boolean" Nullable="false" />
+    <Property Name="UseBillToPricing" Type="Boolean" />
+    <Property Name="eMailInvoice" Type="Boolean" Nullable="false" />
+    <Property Name="eMailQuotes" Type="Boolean" Nullable="false" />
+    <Property Name="PromptAtPOSForEmailQuotes" Type="Boolean" Nullable="false" />
+    <Property Name="isBranch" Type="Boolean" Nullable="false" />
+    <Property Name="eMailStatementLayout" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="eMailStmtRequest" Type="DateTime" Precision="3" />
+    <Property Name="eMailStmtSent" Type="DateTime" Precision="3" />
+    <Property Name="eMailStatements" Type="Boolean" Nullable="false" />
+    <Property Name="eMailForStatements" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BaseSettlement" Type="Decimal" Nullable="false" Precision="18" Scale="6" />
+    <Property Name="takeCODeposits" Type="Boolean" Nullable="false" />
+    <Property Name="eMailInvoiceToBillTo" Type="Boolean" Nullable="false" />
+    <Property Name="BranchCreated" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DonationRounding" Type="Boolean" />
+    <Property Name="DonationRoundingVal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BFDeferred" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PromptTaxInvoice" Type="Boolean" />
+    <Property Name="PopupUserFieldsAtPos" Type="Boolean" />
+    <Property Name="BPayNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TermDaysYN" Type="Boolean" Nullable="false" />
+    <Property Name="TermNoOfMonth" Type="Int32" />
+    <Property Name="PreventAutoAllocate" Type="Boolean" Nullable="false" />
+    <Property Name="PresentSubaccountListAtPos" Type="Boolean" />
+    <Property Name="eMailReceipts" Type="Boolean" Nullable="false" />
+    <Property Name="UseBillToCreditLimit" Type="Boolean" />
+    <Property Name="HideSalePriceFromSignature" Type="Boolean" Nullable="false" />
+    <Property Name="EditedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="eMailForQuotes" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="eMailForReceipts" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LastSocketUpdate" Type="DateTime" Precision="3" />
+    <Property Name="nonEmailStmtsSent" Type="DateTime" Precision="3" />
+    <Property Name="PromptForDeliveryDate" Type="Boolean" Nullable="false" />
+    <Property Name="PinpointUpdateAction" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="BulkEmailableStmtSent" Type="DateTime" Precision="3" />
+    <Property Name="AccType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoyaltyEnrolment" Type="DateTime" Precision="3" />
+    <Property Name="Locked" Type="Boolean" />
+    <Property Name="TaskColour" Type="Int64" />
+  </EntityType>
+  <EntityType Name="UserTypeMaster">
+    <Key>
+      <PropertyRef Name="PK_UserTypeId" />
+    </Key>
+    <Property Name="PK_UserTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsIncenerator" Type="Boolean" />
+  </EntityType>
+</Schema>

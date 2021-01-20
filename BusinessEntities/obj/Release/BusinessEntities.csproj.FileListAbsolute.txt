@@ -1,0 +1,10 @@
+D:\LokeshPrograms\JobPortal\BusinessEntities\bin\Release\BusinessEntities.dll
+D:\LokeshPrograms\JobPortal\BusinessEntities\bin\Release\BusinessEntities.pdb
+D:\LokeshPrograms\JobPortal\BusinessEntities\obj\Release\BusinessEntities.dll
+D:\LokeshPrograms\JobPortal\BusinessEntities\obj\Release\BusinessEntities.pdb
+D:\LokeshPrograms\JobPortal\BusinessEntities\obj\Release\BusinessEntities.csprojResolveAssemblyReference.cache
+E:\OPS\BMWportal\BusinessEntities\bin\Release\BusinessEntities.dll
+E:\OPS\BMWportal\BusinessEntities\bin\Release\BusinessEntities.pdb
+E:\OPS\BMWportal\BusinessEntities\obj\Release\BusinessEntities.csprojResolveAssemblyReference.cache
+E:\OPS\BMWportal\BusinessEntities\obj\Release\BusinessEntities.dll
+E:\OPS\BMWportal\BusinessEntities\obj\Release\BusinessEntities.pdb

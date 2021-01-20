@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="omindori_dbModelStoreContainer" CdmEntityContainer="omindori_dbEntities">
+    <EntitySetMapping Name="CategoryMasters">
+      <EntityTypeMapping TypeName="omindori_dbModel.CategoryMaster">
+        <MappingFragment StoreEntitySet="CategoryMaster">
+          <ScalarProperty Name="PK_CategoryId" ColumnName="PK_CategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemMasters">
+      <EntityTypeMapping TypeName="omindori_dbModel.ItemMaster">
+        <MappingFragment StoreEntitySet="ItemMaster">
+          <ScalarProperty Name="PK_ItemId" ColumnName="PK_ItemId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="OfferRate" ColumnName="OfferRate" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IsCOD" ColumnName="IsCOD" />
+          <ScalarProperty Name="IsFreeDel" ColumnName="IsFreeDel" />
+          <ScalarProperty Name="ShowFrontTop_3" ColumnName="ShowFrontTop_3" />
+          <ScalarProperty Name="ShowFrontMid_3" ColumnName="ShowFrontMid_3" />
+          <ScalarProperty Name="ShowFrontBottom_3" ColumnName="ShowFrontBottom_3" />
+          <ScalarProperty Name="ShowFrontSlider_10" ColumnName="ShowFrontSlider_10" />
+          <ScalarProperty Name="ShowLeftFront_5" ColumnName="ShowLeftFront_5" />
+          <ScalarProperty Name="ShowFrontSingle_1" ColumnName="ShowFrontSingle_1" />
+          <ScalarProperty Name="ShowTop3" ColumnName="ShowTop3" />
+          <ScalarProperty Name="ShowBottom9" ColumnName="ShowBottom9" />
+          <ScalarProperty Name="ShowSlider9" ColumnName="ShowSlider9" />
+          <ScalarProperty Name="ShowLeft5" ColumnName="ShowLeft5" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="FrontPosition" ColumnName="FrontPosition" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderMasters">
+      <EntityTypeMapping TypeName="omindori_dbModel.OrderMaster">
+        <MappingFragment StoreEntitySet="OrderMaster">
+          <ScalarProperty Name="Sno" ColumnName="Sno" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="LandMark" ColumnName="LandMark" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="AddressType" ColumnName="AddressType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductLists">
+      <EntityTypeMapping TypeName="omindori_dbModel.ProductList">
+        <MappingFragment StoreEntitySet="ProductList">
+          <ScalarProperty Name="PK_ImageId" ColumnName="PK_ImageId" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="SaveRate" ColumnName="SaveRate" />
+          <ScalarProperty Name="OfferRate" ColumnName="OfferRate" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="ImageHeading" ColumnName="ImageHeading" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="IsCOD" ColumnName="IsCOD" />
+          <ScalarProperty Name="IsFreeDel" ColumnName="IsFreeDel" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ShowTop_3" ColumnName="ShowTop_3" />
+          <ScalarProperty Name="ShowMid_3" ColumnName="ShowMid_3" />
+          <ScalarProperty Name="ShowBottom_3" ColumnName="ShowBottom_3" />
+          <ScalarProperty Name="ShowSlider10" ColumnName="ShowSlider10" />
+          <ScalarProperty Name="ShowLeft_5" ColumnName="ShowLeft_5" />
+          <ScalarProperty Name="ShowSingle_1" ColumnName="ShowSingle_1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategoryMasters">
+      <EntityTypeMapping TypeName="omindori_dbModel.SubCategoryMaster">
+        <MappingFragment StoreEntitySet="SubCategoryMaster">
+          <ScalarProperty Name="PK_SubCategoryId" ColumnName="PK_SubCategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempOrderLists">
+      <EntityTypeMapping TypeName="omindori_dbModel.TempOrderList">
+        <MappingFragment StoreEntitySet="TempOrderList">
+          <ScalarProperty Name="PK_OrderId" ColumnName="PK_OrderId" />
+          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="SaveRate" ColumnName="SaveRate" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
